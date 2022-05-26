@@ -9,147 +9,7 @@
         <title>Christopher Goldsmith Resume</title>
         <link rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-        <style>
-            * {
-                box-sizing: border-box
-            }
-
-            body {
-                padding: 10px;
-                margin: 0;
-                width: 85vw;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                flex-direction: row;
-                margin: auto;
-                max-width: 1300px
-            }
-
-            main#resume-container {
-                padding: 0;
-                margin: auto;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                flex-direction: row
-            }
-
-            main#resume-container section#about-bar {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                flex-direction: column;
-                width: 30%;
-                margin: 0 0 0 0;
-                padding: 10px 5px;
-                background: #708090;
-                color: ivory;
-                box-shadow: 1px 1px 2px 2px #000
-            }
-
-            main#resume-container section#about-bar #picture {
-                width: 100%;
-                border-radius: 50%;
-                margin: auto;
-                align-self: center;
-                z-index: 100
-            }
-
-            main#resume-container section#about-bar #picture img {
-                width: 100%;
-                border-radius: inherit;
-                border: #000 2px solid;
-                margin: auto;
-            }
-
-            main#resume-container section#about-bar #about-me {
-                background: rgba(0, 0, 0, .35);
-                padding: 5px;
-                border-radius: 5px;
-                width: 90%
-            }
-
-            main#resume-container section#about-bar #about-me h3 {
-                text-align: left
-            }
-
-            main#resume-container section#about-bar #contact-me {
-                list-style: none;
-                padding: 5px;
-                margin: 1vh 0;
-                width: 90%
-            }
-
-            main#resume-container section#about-bar #contact-me li {
-                margin: 0 1vh;
-                border-bottom: 1px dotted #000;
-                padding: 3px
-            }
-
-            main#resume-container section#about-bar #skills {
-                background: rgba(0, 0, 0, .35);
-                padding: 5px;
-                border-radius: 5px;
-                width: 90%
-            }
-
-            main#resume-container section#about-bar #skills li {
-                text-align: left;
-                padding: 3px
-            }
-
-            main#resume-container section#experience-bar {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                flex-direction: column;
-                width: 65%;
-                margin: 0 0 0 1vw;
-                box-shadow: 1px 1px 2px 2px #000
-            }
-
-            main#resume-container #title-section {
-                text-align: center;
-                background: #708090;
-                color: ivory;
-                width: 100%;
-                border-bottom: 2px solid #000
-            }
-
-            main#resume-container #title-section h1 {
-                font-size: 2rem
-            }
-
-            main#resume-container #job-history {
-                background: ivory;
-                border: gray 1px solid
-            }
-
-            main#resume-container #job-history h2 {
-                text-align: center
-            }
-
-            main#resume-container #job-history h3 {
-                font-size: 1.3rem
-            }
-
-            main#resume-container #job-history h4 {
-                font-size: 1.2rem
-            }
-
-            main#resume-container #job-history ul {
-                margin-bottom: 2vh
-            }
-
-            main#resume-container #job-history ul li ul {
-                padding: 2%
-            }
-
-            main#resume-container #job-history ul li ul li {
-                padding: 3px
-            }
-        </style>
+        <link rel="stylesheet" href="./styles/resume.css">
     </head>
 
     <body>
@@ -228,6 +88,45 @@
                     <h1>CHRISTOPHER NOEL GOLDSMITH</h1>
                     <h3>FRONTEND DEVELOPER</h3>
                 </div>
+                <section id="projects">
+                    <header><h3><i class="fa-solid fa-folder-open"></i> Projects I've Created</h3></header>
+                    <div class="project">
+                        
+                        <figure class="desc"><div class="showcase"><h3>Forecast Deck</h3>
+                            <img src="./weather_project.jpg" alt="picture of Frecast Deck app">
+                        <div class="tech-stack">
+                            <i class="fa-brands fa-html5"></i>
+                            <i class="fa-brands fa-css3-alt"></i>
+                            <i class="fa-brands fa-js"></i>
+                            <i class="fa-brands fa-sass"></i>
+                        </div></div>
+                            <div class="desc">
+                                <ul><li><p><span>Purpose:</span> To save specific locations to your deck, to pull and display the current and future forecast for that location on demand.</p></li>
+                                    <li><p><span>Use:</span> A favorite button in a weather app would be convenient for any traveler, such as truckers.  Having saved locations keeps memory of routes they would pass through giving advanced warning of harsh conditions.</p></li>
+                                    <li><p><span>How?:</span> I access the weather through latitude and longitude via the weatherio API, and use a reverseGeocode API to generate the latitude and longitude.  For saving favorites, I utilize the localStorage API to keep it lean, fast and the singlepage user experience seamless.</p></li>
+                                    </ul></figure></div>
+                        
+                    </div>
+                    <div class="project">
+                        <figure>
+                            <div class="showcase"><h3>Flash It!</h3>
+                            <img src="./makesomeflashcards.jpg" alt="">
+                            <div class="tech-stack">
+                                <i class="fa-brands fa-react"></i>
+                                <i class="fa-brands fa-bootstrap"></i>
+                                <i class="fa-brands fa-html5"></i>
+                                <i class="fa-brands fa-css3-alt"></i>
+                                <i class="fa-brands fa-js"></i>
+                            </div>
+                            </div>
+
+                            <div class="desc">
+                                <ul><li><p><span>Purpose:</span> To be a swift and effective single page study app.</p></li>
+                                    <li><p><span>Use:</span> Flash it! Is meant to be quick and effective, single-page application for the needs of basic memorization. You can save any number of question answer pairs into a deck of flashcards, and access them as you see fit via the navbar.</p></li>
+                                    <li><p><span>How?:</span> React was chosen as the foundation for this project since it is best suited to single-page applications. Firebase is used as a database for the user, and localStorage is used to accelerate the user experience and reduce load times.</p></li>
+                                    </ul>
+                                </div></figure></div>
+                </section>
                 <div id="job-history">
                     <h2><i class="fa-solid fa-building"></i> EMPLOYMENT
                         HISTORY</h2>
@@ -236,7 +135,7 @@
                             <h3>Wal-Mart Corporation</h3>
 
                             <p>
-                            <h4>Title: Team Lead (2020 - Current)</h4>
+                            <h4>Title: Team Lead (2012 - Current)</h4>
                             <ul>
                                 <li>Complete oversight of a 130 million
                                     dollar retail environment daily.</li>
@@ -249,56 +148,16 @@ sensitive goals spanning a dealy, weekly,
                                     and seasonal basis.</li>
                                 <li>Employee and consumer conflict
                                     resolution.</li>
+                                    <li>Useing company software to
+                                        create orders for high selling
+                                        products, optimize perpetual inventory
+                                        numbers to keep proper counts, and use
+                                        analytics provided to push high margin
+                                        products.</li>
                             </ul>
                             </p>
                         </li>
-                        <li>
-                            <h3>Wal-Mart Corporation</h3>
-
-                            <p>
-                            <h4>Title: Department Manager (2016 - 2020)
-                            </h4>
-                            <ul>
-                                <li>Merchandising company product to maximize
-                                    sales.</li>
-                                <li>Project Management.</li>
-                                <li>Useing company software to
-                                    create orders for high selling
-                                    products, optimize perpetual inventory
-                                    numbers to keep proper counts, and use
-                                    analytics provided to push high margin
-                                    products.</li>
-                                <li>Training associates on company software
-                                    and basic tasks.</li>
-                                \ <li>Delegating tasks to groups of
-                                    associates and coordinating schedules
-                                    with company needs.</li>
-                                <li>Employee and consumer conflict
-                                    resolution.</li>
-                            </ul>
-                            </p>
-                        </li>
-                        <li>
-                            <h3>Wal-Mart Corporation</h3>
-
-                            <p>
-                            <h4>Title: Inventory Supervisor (2014 - 2016)
-                            </h4>
-                            <ul>
-                                <li>Training associates on company software
-                                    and basic tasks.</li>
-                                \ <li>Overseeing the truck unloading
-                                    process and freight sorting process.
-                                </li>
-                                <li>Coordinating tasks among a small group
-                                    of associates to meet dynamic and
-                                    changing goals.</li>
-                                <li>Scheduling</li>
-                                <li>Employee and consumer conflict
-                                    resolution.</li>
-                            </ul>
-                            </p>
-                        </li>
+                        
                     </ul>
                 </div>
 
